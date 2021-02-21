@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>fortunatedev</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link rel="stylesheet" href="file:///D:/PROJECTS/WEBSITE/css/all.css">
+	<!-- <script defer src="D:\PROJECTS\WEBSITE\js\all.js"></script> -->
+	
+</head>
+
+<body>
+	
+	
+	<header id="home">
+		<nav class="nav">
+			<div class="nav-center">
+				<div class="nav-header">
+				<!-- logo -->
+				<img class="logo" src="./images/fortune.png">
+
+
+				<!-- toggle bar -->
+				<button class="bar"><i class="fas fa-bars"></i></button>
+				</div>
+				<div class="nav-link">
+					<ul class="link">
+						<li>
+							<a class="link" href="#home">Home</a>
+						</li>
+						<li>
+							<a class="link" href="#about">About</a>
+						</li>
+						<li>
+							<a class="link" href="#contact">Contact</a>
+						</li>
+						<li>
+							<a class="link" href="#resume">Resume</a>
+						</li>
+						<li>
+							<a class="link" href="#projects">Projects</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="banner">
+			<div class="quote"></div>
+			<time class="time"></time>
+			<h1 class="date"></h1>
+			<h1 class="greeting" style="color: #12344a;"></h1>
+			<h2 class="welcome" style="color: #12344a;">Welcome to my Website</h2>
+			
+			<a class="explore" href="#projects">Explore my  Works</a>
+		</div>
+		
+	</header>
+
+	<section id="about">
+		<div class="about">
+		<h3>About me</h3>
+		<p>My Name is Sunday Fortune from Lagos, Nigeria.<br><br>I am a Software Developer who is passionate about 
+			using the best tool in solving real life problem. <br><br>I am proficient in HTML, CSS, Javascript, Wordpress, NodeJS, ExpressJS, MongoDB, Mongoose etc. 
+			<br><br>Currently trying to be better in React</p>
+		</div>
+	
+		</section>
+
+	<section id="contact">
+		<div class="contact">
+		<h3>CONTACT ME</h3>
+		<p id="msg_"><%= msg %> </p>
+		<p>I am ready, Lets talk</p>
+		
+		<form class="contact-form" action="/#contact" method="POST">
+			
+			<input type="text" name="name" required placeholder="Enter your name...">
+			
+            <input type="email" name="email" required placeholder="Enter your email...">
+
+			<textarea name="message" id="msg" cols="20" rows="5" required placeholder="Enter your message..." style="height: 150px"></textarea>
+			<button type="submit" value="submit">Submit</button>
+		</form>
+		</div>
+
+		<div class="address">
+			<h2>CONTACT INFO</h2>
+			<h4>Address:</h4>
+			<p>Lagos, Nigeria</p><br>
+			<h4>Email me:</h4>
+			<p>fortunateweb@yahoo.com</p><br>
+			<h4>Call me:</h4>
+			<p>+2347063638452</p><br>
+
+		<div class="social">
+		<a href="https://twitter.com/sundayfortune" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://facebook.com/iriemena" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		<a href="https://github.com/iriemena" target="_blank"><i class="fab fa-github"></i></a>
+		<a href="https://www.linkedin.com/in/sunday-nnaji-5a7686136/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+	</div>
+		</div>
+	</section>
+
+	<section id="resume">
+		<h3>My Resume</h3>
+		<img src="./images/cv.png" class="cv" alt="" width="100%">
+		<div class="download">
+		<p>Download</p>
+	<a href="./Resume.pdf" target='_blank' download="Resume.pdf" ><i class="fas fa-download"></i></a>
+	</div>
+	</section>
+
+
+	<section id="projects">
+		<h3>My Projects</h3>
+		<div class="projects">
+			<!-- projects here -->
+		</div>
+	</section>
+
+<button class="top-arrow">
+	<a  href="#home"><i class="fas fa-arrow-up" style="color: white"></i></a>
+</button>
+</div>
+
+<div>
+	<footer>
+		<p>Copyright &copy <span class="copy"></span> fortunatedev</p>
+	</footer>
+</div>
+
+<!-- javascript -->
+<script src="web.js"></script>
+</body>
+	
+</html>
