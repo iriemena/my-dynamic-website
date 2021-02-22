@@ -1,6 +1,8 @@
 const { urlencoded } = require('express')
 const express = require('express')
 const nodemailer = require('nodemailer')
+
+
 require('dotenv/config')
 
 const app = express()
@@ -34,15 +36,20 @@ app.post('/', (req, res) => {
       user: process.env.USER_ID,
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN
-      // accessToken: process.env.ACCESS_TOKEN
+      refreshToken: process.env.REFRESH_TOKEN,
     }
+
+    // service: 'gmail',
+    // auth:{
+    //   user: process.env.USER_ID1,
+    //   pass: process.env.USER_PASS
+    // }
   })
 
   let mail = {
     from: `Website Contact ${process.env.USER_ID}`,
     to: process.env.USER_ID,
-    subject: 'Contact Message',
+    subject: `${req.body.subject}`,
     html: output
   }
 
@@ -53,7 +60,7 @@ app.post('/', (req, res) => {
         .render('index', { msg: 'Message Not Sent, try again!'})
     } else {
       res.render('index', {
-        msg: `Message Sent! Thank you, ${req.body.name}, for contacting us`
+        msg: `Success! Thank you, ${req.body.name}, for contacting us`
       })
     }
     transporter.close()
